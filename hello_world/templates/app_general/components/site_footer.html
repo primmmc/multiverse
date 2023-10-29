@@ -1,0 +1,25 @@
+{% comment %} {% load static %}
+<footer>
+    <p>
+        <img src="{% static "app_general/footer_logo.svg" %}">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'docs' %}">Docs</a>
+        <a href="{% url 'reports' %}">Report</a>
+    </p>
+</footer> {% endcomment %}
+
+{% load static %}
+<footer>
+    <div class="site-footer-logo">
+        <img class="footer-logo" src="{% static "app_general/footer_logo.svg" %}">
+    </div>
+    <div class="site-footer-item-container">
+        <nav>
+            <ul>
+                <li><a class="site-footer-item site-header-brand" href="{% url 'home' %}">Home</a></li>
+                <li><a class="site-footer-item" href="{% url 'docs' %}">Docs</a></li>
+                <li><a class="site-footer-item" href="{% url 'reports' %}">Report</a></li>
+            </ul>
+        </nav>
+    </div>    
+    </footer>

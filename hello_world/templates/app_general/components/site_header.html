@@ -1,0 +1,16 @@
+{% load static %}
+<header>
+    <div class="site-header-item-container">
+        <nav>
+            <ul>
+                <li><a class="site-header-item site-header-brand" href="{% url 'home' %}">Home</a></li>
+                <li><a class="site-header-item" href="{% url 'docs' %}">Docs</a></li>
+                <li><a class="site-header-item" href="{% url 'reports' %}">Report</a></li>
+            </ul>
+        </nav>
+    </div>    
+        <div class="site-header-logo">
+            <img class="header-logo" src="{% static "app_general/header_logo.svg" %}">
+        </div>
+</header>
+

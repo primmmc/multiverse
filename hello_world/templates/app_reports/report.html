@@ -1,0 +1,13 @@
+{% extends "app_general/components/base.html" %}
+{% block site_title %}{{report.title}}{% endblock site_title %}Docs
+{% block content%}
+
+{% if report is not None %}
+<div>
+    <h3>{{ report.title }}</h3>
+    <p>{{ report.start_date|date:'j N Y G:i' }}</p>
+</div>
+{% else %}
+    <p>Not Found this report</p>
+{% endif %}
+{% endblock  %}

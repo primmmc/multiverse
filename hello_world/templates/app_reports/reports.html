@@ -1,0 +1,15 @@
+{% extends "app_general/components/base.html" %}
+{% block site_title %}Docs{% endblock site_title %}Docs
+{% block content%}
+<div>
+    <h2> All Report </h2>
+    {% for report in reports %}
+        <div style="background-color: lightblue">
+            <h3><a href="{% url "report" report.id %}">{{ report.title }}</a></h3>
+            <p>{{ report.start_date|date:'j N Y G:i' }}</p>
+        </div>
+    {% empty %}
+        <p>No result</p>
+    {% endfor %}
+</div>
+{% endblock  %}

@@ -1,0 +1,25 @@
+{% extends "app_general/components/base.html" %}
+{% load static %}
+{% block content %}
+<section class="home-layout">
+    <div class="home-info">
+        <div class="centered-content">
+            <div class="home-title">
+                <h1>The Text Sentimental Analysis</h1>
+            </div>
+            <div class="home-content">
+                <p>Unlock the power of your business with our platform, designed to enhance your success by analyzing sentiment from your customer feedback!</p>
+            </div>
+            <div class="home-btn">
+                <button class="home-btn1" role="button">Get Started!</button>
+            </div>
+        </div>
+    </div>
+    <div class="home-guide">
+        <div class="home-guide-picture">
+            <img src="{% static 'app_general/home_guide.svg' %}">
+        </div>
+    </div>
+</section>
+{% endblock %}
+
