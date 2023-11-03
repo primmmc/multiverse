@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const dropArea = document.getElementById("drop-area");
     const fileInput = document.getElementById("fileInput");
     const fileList = document.getElementById("fileList");
-    const deleteButton = document.getElementById("deleteButton");
 
     dropArea.addEventListener("dragover", function (e) {
         e.preventDefault();
@@ -34,14 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // You can perform further actions with the selected files here.
     });
 
-    /*Delete button*/
-    deleteButton.addEventListener("click", function () {
-        // Clear the selected file(s) in the file input
-        fileInput.value = null;
-        // Clear the displayed file names
-        fileList.innerHTML = "";
-    });
-
     function displayFileNames(files) {
         fileList.innerHTML = ""; // Clear previous file names
         for (let i = 0; i < files.length; i++) {
@@ -52,20 +43,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
-
-const editButton = document.getElementById("editButton");
-
-editButton.addEventListener("click", function () {
-    const fileName = fileList.querySelector("p"); // Get the first displayed file name (you can customize this logic)
-    
-    if (fileName) {
-        const newName = prompt("Enter a new name for the file:", fileName.textContent);
-        
-        if (newName !== null) {
-            // Update the displayed file name with the new name
-            fileName.textContent = newName;
-        }
-    }
-});
-
-

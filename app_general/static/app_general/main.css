@@ -217,10 +217,6 @@ footer {
 
 
 
-
-
-
-
 /* text sentiment */
 
 .ts-header {
@@ -434,9 +430,16 @@ footer {
 }
 
 
-/* CSS for the table container */
-.table-container {
-    max-height: 400px; /* Adjust the desired height as needed */
-    overflow: auto;
+.ts-graph-container {
+    width: 300px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    margin: 30px auto; /* Center the container horizontally */
+    text-align: center; /* Center the content within the container */
+    position: relative; /* Add a relative position to center children */
 }
 
+/* Center the SVG content inside the container */
+.ts-graph-container svg {
+    display: block; /* Make the SVG a block element */
+    margin: 0 auto; /* Center the SVG horizontally */
+}
